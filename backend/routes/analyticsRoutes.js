@@ -1,0 +1,10 @@
+const express = require('express');
+const { getDailyStats, getWeeklyStats, getMonthlyStats, getAlertStats } = require('../controllers/analyticsController');
+const { protect } = require('../middleware/auth');
+const router = express.Router();
+router.use(protect);
+router.get('/daily', getDailyStats);
+router.get('/weekly', getWeeklyStats);
+router.get('/monthly', getMonthlyStats);
+router.get('/alerts', getAlertStats);
+module.exports = router;
