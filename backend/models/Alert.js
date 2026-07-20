@@ -6,7 +6,7 @@ const alertSchema = new mongoose.Schema({
     type: String,
     enum: ['cpu', 'memory', 'disk', 'temperature', 'battery', 'network', 'security'],
     required: true
-  },
+  }, 
   severity: {
     type: String,
     enum: ['info', 'warning', 'critical'],
